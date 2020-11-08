@@ -1,0 +1,53 @@
+---
+title: "Week11"
+author: "Arushi Arora"
+date: "11/11/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#### Overview
+
+Amazon.com provides e-commerce services among its diverse lines of businesses. The website https://www.amazon.com/ is a one stop shop for all shopping needs for millions of customers across the US and worldwide. It offers services like grocery, Prime video and as an online retailer to buy books, housewares, electronics, toys, and many other goods. It makes recommendations catered to customer needs based on a Recommender System specially catering to the needs of it millions of customers effectively.
+
+
+
+#### Scenario Design
+
+1) Who are the target users?
+
+Customers who’re looking to purchase anything and everything— from furniture to electronics to sport and exercise gear, fashion apparels, car accessories— to name a few.
+
+2) What are their key goals?
+
+To make recommendations to their end user that might be helpful in choosing the best items thus enhancing the user experience
+
+3) How can you help them accomplish those goals?
+
+Amazon.com can personalize its website to recommend products based on a customer’s interests.
+
+
+
+#### Attempt to Reverse Engineer the Recommender System
+
+The website, Amazon.com uses recommendations as a targeted marketing tool in its email campaigns and for e-commerce on its online retail store page. The website offers customers with product suggestions based on previously bought items or the items in their shopping cart along with seasonal recommendations.
+
+They do so by using multiple recommending techniques, including item-to-item collaborative filtering (IICF).
+
+Unlike Traditional Filtering, where a user is matched to similar customers IICF matches each of the user’s purchased/(ing) and rated items to similar items. It then combines those similar items into a recommendation list using a cosine measure. 
+
+This cosine measure O(N2M) computes similarity between two items in which each vector corresponds to an item rather than a customer, and the vector’s M dimensions correspond to customers who have purchased that item.
+
+The recommender system builds a similar-items table by finding items each user purchases and rates, aggregates those items, and then recommends the most popular or correlated items.
+
+
+#### Recommendations about how to improve Recommender System
+
+Recommendations about how to improve Recommender System
+As an end user, for me, Amazon’s recommendations are relevant only when I’m purchasing an item. The recommendations help me find the best deals on an item. But their recommendations on items that I’ve already bought seem irrelevant to me. Some products like groceries or tissues might require a monthly subscription. But items that I don’t have to buy again also show up in recommendations based on previous purchases, for example electronic items or furniture pieces. There is a way to manage these recommendations, however, if a user has hundred such items that they purchased over a span of couple years, it may not be an efficient task to deselect them all to stop viewing them. Currently, Amazon has the option to get a monthly subscription for some items which it identifies as regularly consumed items. But perhaps implementing an algorithm which identifies items that can be classified as a one-time purchase like furniture which most users will not buy/replace for two three years can further improve recommendations.
+
+#### Reference
+Linden, G., Smith, B., & York, J. (2003). Amazon. com recommendations: Item-to-item collaborative filtering. IEEE Internet computing, 7(1), 76-80.
